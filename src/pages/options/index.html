@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>向井くん</title>
+    <link href="/assets/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <br />
+    <div class="container">
+        <h1>向井くん</h1>
+        <p>Moodleの強制ダウンロードを改変するくん</p>
+        <hr />
+        <h3>設定</h3>
+        <form>
+            <div class="mb-3">
+                <label for="moodleUrl" class="form-label">MoodleのUrl*</label>
+                <input type="url" class="form-control" id="moodleUrl" aria-describedby="moodleUrlHelp"
+                    placeholder="https://moodle.example.com" required />
+                <div id="moodleUrl" class="form-text">Moodleを開いてそのUrlを貼り付けてください。同じドメインにあるリソースすべてに適用します。この設定は必須です。</div>
+            </div>
+            <div class="mb-3">
+                <label for="targetExts" class="form-label">対象の拡張子</label>
+                <input type="text" class="form-control" id="targetExts" aria-describedby="moodleUrlHelp"
+                    placeholder="pdf,jpg,png" />
+                <div id="targetExts" class="form-text">forcedownloadを上書きして、ブラウザ上で閲覧する拡張子。カンマ区切りで複数指定できます。</div>
+            </div>
+            <div class="mb-3">
+                <label for="targetExts" class="form-label">Content-Dispositionを上書きするUrl</label>
+                <textarea class="form-control" id="urlPatterns" aria-describedby="moodleUrlHelp"
+                    placeholder="https://example.com/*"></textarea>
+                <div id="targetExts" class="form-text">forcedownloadを上書きして、ブラウザ上で閲覧するUrl。一行ずつ複数指定できます。</div>
+            </div>
+            <button id="save" class="btn btn-primary">適用</button>
+        </form>
+    </div>
+    <script src="index.js"></script>
+    <script src="assets/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+{
+    "manifest_version": 3,
+    "name": "向井くん",
+    "version": "1.0",
+    "permissions": [
+      "declarativeNetRequestWithHostAccess",
+      "storage"
+    ],
+    "host_permissions": ["<all_urls>"],
+    "options_ui": {
+      "page": "./options/index.html",
+      "open_in_tab": true
+    },
+    "declarative_net_request": {
+      "rule_resources": [
+        {
+          "id": "ruleset",
+          "enabled": true,
+          "path": "rules.json"
+        }
+      ]
+    },
+    "background" : {
+        "service_worker" : "background.js"
+    },
+    "action": {
+      "default_title": "向井くん",
+      "default_popup": "./popup/index.html"
+    },
+      "icons": {
+      "16": "icon/mukai16.png",
+      "48": "icon/mukai48.png",
+      "128": "icon/mukai128.png"
+    }
+  }
