@@ -11,7 +11,7 @@ chrome.runtime.onInstalled.addListener(() => {
         chrome.storage.sync.set({ moodleUrl, targetExts, urlPatterns }, () => {
             if(moodleUrl == '') {
                 // moodleUrlが未設定の場合はオプションページを開く
-                chrome.tabs.create({"url": "options/index.html"});
+                chrome.tabs.create({"url": "pages/options/index.html"});
             }
           });
       });

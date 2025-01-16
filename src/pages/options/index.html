@@ -11,31 +11,49 @@
 <body>
     <br />
     <div class="container">
-        <h1>向井くん</h1>
-        <p>Moodleの強制ダウンロードを改変するくん</p>
+        <h1><img src="/icon/mukai48.png" alt="向井くん" /></h1>
+        <p>Moodleのリソース表示を改善するくん</p>
+        <hr />
+        <h3>なにこれ</h3>
+        <ul>
+            <li>Moodleで掲示されているPDFなどのファイルを、ダウンロードせずにブラウザ内で読み込む拡張機能です。</li>
+            <li>Moodle以外のサイトでも、パターンを書くことでブラウザ内で読み込めます。</li>
+            <li>初めましての人は、まず下の設定欄にMoodleのUrlを入力しよう。</li>
+        </ul>
         <hr />
         <h3>設定</h3>
         <form>
             <div class="mb-3">
-                <label for="moodleUrl" class="form-label">MoodleのUrl*</label>
+                <label for="moodleUrl" class="form-label">MoodleのUrl</label>
                 <input type="url" class="form-control" id="moodleUrl" aria-describedby="moodleUrlHelp"
-                    placeholder="https://moodle.example.com" required />
-                <div id="moodleUrl" class="form-text">Moodleを開いてそのUrlを貼り付けてください。同じドメインにあるリソースすべてに適用します。この設定は必須です。</div>
+                    placeholder="https://moodle.example.com" />
+                <div id="moodleUrl" class="form-text">Moodleを開いてそのUrlをコピペしてください。</div>
             </div>
             <div class="mb-3">
                 <label for="targetExts" class="form-label">対象の拡張子</label>
                 <input type="text" class="form-control" id="targetExts" aria-describedby="moodleUrlHelp"
                     placeholder="pdf,jpg,png" />
-                <div id="targetExts" class="form-text">forcedownloadを上書きして、ブラウザ上で閲覧する拡張子。カンマ区切りで複数指定できます。</div>
+                <div id="targetExts" class="form-text">ダウンロードせず、ブラウザ上で閲覧する拡張子。カンマ区切りで複数指定できます。</div>
             </div>
             <div class="mb-3">
-                <label for="targetExts" class="form-label">Content-Dispositionを上書きするUrl</label>
+                <label for="targetExts" class="form-label">Moodle以外のUrlパターン</label>
                 <textarea class="form-control" id="urlPatterns" aria-describedby="moodleUrlHelp"
                     placeholder="https://example.com/*"></textarea>
-                <div id="targetExts" class="form-text">forcedownloadを上書きして、ブラウザ上で閲覧するUrl。一行ずつ複数指定できます。</div>
+                <div id="targetExts" class="form-text">ダウンロードせず、ブラウザ上で閲覧するUrlのパターン。一行ずつ複数個書けます。<a
+                        href="https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest?hl=ja#url_filter_syntax">構文の詳細</a>
+                </div>
             </div>
-            <button id="save" class="btn btn-primary">適用</button>
+            <button id="save" class="btn btn-primary">保存</button>
+            <button id="reset" class="btn btn-danger">リセット</button>
         </form>
+        <hr />
+        <h3>リンク</h3>
+        <ul>
+            <li>作ったひと: <a href="https://taiseiue.jp/">taiseiue</a></li>
+            <li><a href="https://github.com/taiseiue/mukaikun">GitHub Repository</a></li>
+            <li>Released under the <a href="https://github.com/taiseiue/mukaikun/blob/main/LICENSE">MIT License</a>.
+            </li>
+        </ul>
     </div>
     <script src="index.js"></script>
     <script src="assets/bootstrap.bundle.min.js"></script>
